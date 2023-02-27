@@ -8,7 +8,6 @@ LR = int(sys.argv[1])
 num_epoch = int(sys.argv[2])
 
 particle = sys.argv[3]
-h5py_path = sys.argv[4]
 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -18,6 +17,7 @@ sys.path.append("../")
 # import Line_module
 
 # Get Event number list
+h5py_path = "/mnt/scratch/kobayashik/hitmap.h5"
 event_number = np.load(f"./train_dataset/Conv3D_result/event_number{LR}.npy")
 
 # Get number of Event
