@@ -231,6 +231,7 @@ output_y = output_y.reshape(len(en_test))
 true_y = true_y.reshape(len(en_test))
 print(output_y.shape, type(output_y))
 print(true_y.shape, type(true_y))
+print("Validation Loss Minimum epoch=", vloss.argmin(), "vloss=", vloss.min())
 
 np.save("./" + exe_file + f"/Conv3D_result/y_output{LR}", output_y)
 np.save("./" + exe_file + f"/Conv3D_result/y_label{LR}", true_y)
