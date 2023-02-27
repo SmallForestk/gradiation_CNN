@@ -10,6 +10,7 @@ num_epoch = int(sys.argv[3])
 
 particle = sys.argv[4]
 energy = int(sys.argv[5])
+h5py_path = sys.argv[6]
 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -21,7 +22,6 @@ sys.path.append("../")
 # Line_module.notify_to_line(f"start test in Energy={energy}GeV, learning rate={LR}, {num_epoch}epoch")
 
 # Get number of Event
-h5py_path = "/train_dataset/hitmap.h5"
 with h5py.File(h5py_path) as f:
     nofsignal = int(f[particle]["nofEvent"][()])
 
