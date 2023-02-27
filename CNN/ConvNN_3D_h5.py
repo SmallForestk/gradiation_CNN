@@ -27,7 +27,7 @@ sys.path.append("../")
 # Line_module.notify_to_line("start in " + exe_file + f"learning rate={LR}, {num_epoch}epoch")
 
 # Get number of Event
-h5py_path = "/mnt/scratch/kobayashik/hitmap.h5"
+h5py_path = "/train_dataset/hitmap.h5"
 with h5py.File(h5py_path) as f:
     nofevent = f[particle]["nofEvent"][()]
 
