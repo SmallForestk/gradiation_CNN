@@ -9,23 +9,22 @@ import Cnn_tool
 import Line_module
 
 exe_file = sys.argv[1]
-particle = sys.argv[2]
 # decide hitmap size
-xmax = int(sys.argv[3])
-xmin = int(sys.argv[4])
-ymax = int(sys.argv[5])
-ymin = int(sys.argv[6])
-zmax = int(sys.argv[7])
-zmin = int(sys.argv[8])
-nofx = int(sys.argv[9])
-nofy = int(sys.argv[10])
+xmax = int(sys.argv[2])
+xmin = int(sys.argv[3])
+ymax = int(sys.argv[4])
+ymin = int(sys.argv[5])
+zmax = int(sys.argv[6])
+zmin = int(sys.argv[7])
+nofx = int(sys.argv[8])
+nofy = int(sys.argv[9])
 
 
-Line_module.notify_to_line("make hitmap in " + exe_file + " particle:" + particle)
-print("make hitmap in " + exe_file + " particle:" + particle)
+Line_module.notify_to_line("make hitmap in " + exe_file)
+print("make hitmap in " + exe_file)
 
 # read root file and get ttree
-rf = r.TFile("./" + exe_file + "/" + particle + ".root")
+rf = r.TFile(exe_file)
 tree = rf.Get("Edep")
 
 # read root file for energy label
